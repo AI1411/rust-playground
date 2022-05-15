@@ -1,37 +1,14 @@
-use rand::Rng;
-
-const MAP_N: usize = 25;
+fn sum_slice(items: &[i64]) -> i64 {
+    let mut total = 0;
+    for item in items {
+        total += item;
+    }
+    total
+}
 
 fn main() {
-    let mut rng = rand::thread_rng();
-    let mut maze = [[0; MAP_N]; MAP_N];
-    for n in 0..MAP_N {
-        maze[n][0] = 1;
-        maze[0][n] = 1;
-        maze[n][MAP_N] = 1;
-        maze[MAP_N - 1][n] = 1;
-    }
-
-    for y in 2..MAP_N - 2 {
-        for x in MAP_N - 2 {
-            if x % 2 == 1 || y % 2 == 1 { continue; }
-            maze[y][x] = 1;
-            let r = rng.gen_range(0..=3);
-            match r {
-                0 => maze[y - 1][x] = 1,
-                1 => maze[y + 1][x] = 1,
-                2 => maze[y][x - 1] = 1,
-                3 => maze[y][x + 1] = 1,
-                _ => {}
-            }
-        }
-    }
-
-    let tiles = [" ", "ZZ"];
-    for y in 0..MAP_N {
-        for x in 0..MAP_N {
-            println!("{}", tiles[maze[y][x]]);
-        }
-        println!("");
-    }
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    println!("a={}", sum_slice(&a[..]));
+    let b = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    println!("b={}", sum_slice(&b[..]));
 }
