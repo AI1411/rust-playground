@@ -6,4 +6,3 @@ jobs:
     steps:
       - name: test
         run: cargo test --all
-        working-directory: .
