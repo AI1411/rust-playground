@@ -4,6 +4,7 @@ mod comb_sort;
 mod counting_sort;
 mod cycle_sort;
 mod exchange_sort;
+mod gnome_sort;
 
 use std::cmp;
 pub use self::bubble_sort::bubble_sort;
@@ -13,6 +14,7 @@ pub use self::counting_sort::counting_sort;
 pub use self::counting_sort::generic_counting_sort;
 pub use self::cycle_sort::cycle_sort;
 pub use self::exchange_sort::exchange_sort;
+pub use self::gnome_sort::gnome_sort;
 
 pub fn is_sorted<T>(arr: &[T]) -> bool
     where
