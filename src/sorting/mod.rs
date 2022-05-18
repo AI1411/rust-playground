@@ -1,9 +1,11 @@
 mod bubble_sort;
 mod cocktail_shaker_sort;
+mod comb_sort;
 
 use std::cmp;
 pub use self::bubble_sort::bubble_sort;
 pub use self::cocktail_shaker_sort::cocktail_shaker_sort;
+pub use self::comb_sort::comb_sort;
 
 pub fn is_sorted<T>(arr: &[T]) -> bool
     where
