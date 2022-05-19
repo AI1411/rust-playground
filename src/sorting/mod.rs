@@ -9,6 +9,7 @@ mod heap_sort;
 mod insertion_sort;
 mod merge_sort;
 mod odd_even_sort;
+mod pancake_sort;
 
 use std::cmp;
 pub use self::bubble_sort::bubble_sort;
@@ -23,6 +24,7 @@ pub use self::heap_sort::heap_sort;
 pub use self::insertion_sort::insertion_sort;
 pub use self::merge_sort::merge_sort;
 pub use self::odd_even_sort::odd_even_sort;
+pub use self::pancake_sort::pancake_sort;
 
 pub fn is_sorted<T>(arr: &[T]) -> bool
     where
