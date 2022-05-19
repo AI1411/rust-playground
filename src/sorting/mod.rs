@@ -11,6 +11,7 @@ mod merge_sort;
 mod odd_even_sort;
 mod pancake_sort;
 mod radix_sort;
+mod selection_sort;
 
 use std::cmp;
 pub use self::bubble_sort::bubble_sort;
@@ -27,6 +28,7 @@ pub use self::merge_sort::merge_sort;
 pub use self::odd_even_sort::odd_even_sort;
 pub use self::pancake_sort::pancake_sort;
 pub use self::radix_sort::radix_sort;
+pub use self::selection_sort::selection_sort;
 
 pub fn is_sorted<T>(arr: &[T]) -> bool
     where
