@@ -6,6 +6,7 @@ mod cycle_sort;
 mod exchange_sort;
 mod gnome_sort;
 mod heap_sort;
+mod insertion_sort;
 
 use std::cmp;
 pub use self::bubble_sort::bubble_sort;
@@ -17,6 +18,7 @@ pub use self::cycle_sort::cycle_sort;
 pub use self::exchange_sort::exchange_sort;
 pub use self::gnome_sort::gnome_sort;
 pub use self::heap_sort::heap_sort;
+pub use self::insertion_sort::insertion_sort;
 
 pub fn is_sorted<T>(arr: &[T]) -> bool
     where
